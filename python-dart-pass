@@ -1,0 +1,29 @@
+students={
+    "Ahmed":"class1",
+    "Mustafa": "class3",
+    "Ali":"class2",
+    "sara":"class1",
+    "zainab":"class1",
+    "zain":"class2",
+
+}
+def isolate(dictionary,val_to_find1,val_to_find2,val_to_find3): 
+   newlistforkeys1 = list()
+   newlistforkeys2 = list()
+   newlistforkeys3 = list()
+   for key, value in dictionary.items(): 
+      if value == val_to_find1:
+       newlistforkeys1.append(key)
+   print("'class1 ':",newlistforkeys1)
+   
+   for key, value in dictionary.items(): 
+      if value == val_to_find2:
+       newlistforkeys2.append(key)
+   print("'class3 ':",newlistforkeys2)
+   
+   for key, value in dictionary.items(): 
+      if value == val_to_find3:
+       newlistforkeys3.append(key)
+   print("'class2 ':",newlistforkeys3)
+#calling the method 
+isolate(students,"class1","class3","class2")
