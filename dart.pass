@@ -1,0 +1,106 @@
+# python-dart-pass
+void main() {
+
+  List listA = [
+    "Muklah",
+    "Diyar",
+    "Noorhan",
+    "Ali",
+    "Abdulbasit",
+    "Dena",
+    "Saba",
+    "Fadi",
+    "Karrar",
+    "Ahmed"
+  ];
+  List<String> listB = [
+    "Diyar",
+    "Noorhan",
+    "Muklah",
+    "Saba",
+    "Mustafa",
+    "Ahmed",
+    "Fadi",
+    "Dena",
+    "Hassan",
+    "Ali",
+  ];
+  
+ 
+  listA.removeWhere((item) => !listB.contains(item));
+  print(listA);
+
+  for (var i = 0; i < listA.length; i++) {
+    String element = listB[i];
+
+    if (element.contains('M')) {
+      print(element);
+    }
+  }
+  
+
+  Account s=Account(50,'zahraa','1998',7000,2022);
+  s.setaccountnumber(50,'zahraa','1998',7000,2022);
+  print(s.insert);
+  s.setdeposit(400);
+  print(s.getdeposit());
+  s.setwithdraw(600);
+  print(s.getwithdraw());
+
+  
+  
+}
+
+class Account 
+{
+late int _accountNo,_amountdeposit,_amountwithdraw;
+String _name;
+ String _dateOfBirth ;
+ double _amount;
+ DateTime _dateCreated ;
+  
+  Account(this._accountNo,this._name,this._dateOfBirth,this._amount,this._dateCreated);
+  
+  void setaccountnumber(int i,String n ,String d,double am,DateTime dc)
+  {
+    this._accountNo= i;
+    this._name=n;
+    this._dateOfBirth=d;
+    this._amount=am;
+    this._dateCreated=dc;
+    
+  }
+  
+  int insert()
+  {
+    return this._accountNo,this._name,this._dateOfBirth,this._amount,this._dateCreated;
+    
+  }
+  
+  
+  void setdeposit(int ad)
+  {
+    this._amountdeposit=ad;
+    
+    
+  }
+  int getdeposit()
+  { 
+    return this._amount + this._amountdeposit;
+  }
+  
+  
+  void setwithdraw(int aw)
+  {
+    this._amountwithdraw=aw;
+    
+    
+  }
+  int getwithdraw()
+  { 
+    return this._amount - this._amountwithdraw;
+  }
+}
+
+
+
